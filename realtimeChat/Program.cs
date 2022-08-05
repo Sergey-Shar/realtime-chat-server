@@ -24,9 +24,9 @@ var app = builder.Build();
 
 app.UseRouting();
 
-app.UseWebSockets();
-
 app.UseCors();
+
+app.UseWebSockets();
 
 app.UseEndpoints(endnpoints =>
 {
