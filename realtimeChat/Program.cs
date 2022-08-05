@@ -26,7 +26,7 @@ app.UseRouting();
 
 app.UseCors();
 
-app.UseWebSockets();
+
 
 app.UseEndpoints(endnpoints =>
 {
