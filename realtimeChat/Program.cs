@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         builder =>
         {
-            builder.WithOrigins("http://localhost:3000")
+            builder.WithOrigins("https://sergey-realtime-chat.herokuapp.com")
                 .AllowAnyHeader()
                 .WithMethods()
                 .AllowCredentials();
@@ -25,6 +25,8 @@ var app = builder.Build();
 app.UseRouting();
 
 app.UseCors();
+
+app.UseWebSockets();
 
 app.UseEndpoints(endnpoints =>
 {
