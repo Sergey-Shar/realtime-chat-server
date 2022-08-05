@@ -11,7 +11,7 @@ namespace realtimeChat.Hubs
 
         public ChatHub(IDictionary<string, UserConnection> connections)
         {
-            _botUser = "MyChat Bot";
+            _botUser = "чат бот";
             _connections = connections;
         }
 
@@ -22,7 +22,7 @@ namespace realtimeChat.Hubs
                 _connections.Remove(Context.ConnectionId);
                 Clients.Group(userConnection.Room)
                 .SendAsync("ReciveMessage", _botUser,
-                $"{userConnection.User} has left");
+                $"{userConnection.User} покинул чат");
 
                 SendConnectedUsers(userConnection.Room);
             }
@@ -45,7 +45,7 @@ namespace realtimeChat.Hubs
             _connections[Context.ConnectionId] = userConnection;
 
             await Clients.Group(userConnection.Room).SendAsync("ReciveMessage", _botUser,
-                $"{userConnection.User} has joined {userConnection.Room}");
+                $"{userConnection.User} присоединился к чату {userConnection.Room}");
 
             await SendConnectedUsers(userConnection.Room);
         }
