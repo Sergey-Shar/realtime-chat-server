@@ -45,7 +45,7 @@ namespace realtimeChat.Hubs
             _connections[Context.ConnectionId] = userConnection;
 
             await Clients.Group(userConnection.Room).SendAsync("ReciveMessage", _botUser,
-                $"{userConnection.User} присоединился к чату {userConnection.Room}");
+                $"{userConnection.User} присоединился к чату: {userConnection.Room}");
 
             await SendConnectedUsers(userConnection.Room);
         }
