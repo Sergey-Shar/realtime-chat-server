@@ -6,4 +6,4 @@ This project is a hub, which is a server part of the chat, in which the user can
 
 This functionality is implemented using  [ASP .NET Core SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/)
 
-The client part of the application is implemented using  [React.js](https://ru.reactjs.org/) 
+The [client](https://github.com/Sergey-Shar/real-time-chat) part of the application is implemented using  [React.js](https://ru.reactjs.org/) 
