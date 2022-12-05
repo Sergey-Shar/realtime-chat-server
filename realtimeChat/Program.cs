@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         builder =>
         {
-            builder.WithOrigins("https://sergey-realtime-chat.herokuapp.com/")
+            builder.WithOrigins("https://real-time-chat-lovat.vercel.app/")
                 .AllowAnyHeader()
                 .WithMethods()
                 .AllowCredentials();
